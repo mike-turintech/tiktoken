@@ -17,7 +17,7 @@ def benchmark_batch(documents: list[str]) -> None:
     num_bytes = sum(map(len, map(str.encode, documents)))
     print(f"num_threads: {num_threads}, num_bytes: {num_bytes}")
 
-    enc = tiktoken.get_encoding("gpt2")
+    enc = tiktoken.get_encoding("o200k_base")  # GPT-5 encoding
     enc.encode("warmup")
 
     start = time.perf_counter_ns()

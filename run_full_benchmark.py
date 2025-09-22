@@ -145,7 +145,7 @@ def run_benchmark_with_threads(documents, thread_counts=[2, 4, 8], iterations=10
     results = {}
 
     # Test tiktoken with different thread counts
-    enc = tiktoken.get_encoding("gpt2")
+    enc = tiktoken.get_encoding("o200k_base")  # GPT-5 encoding
     enc.encode("warmup")  # Warmup
 
     print("\nThread Count | Speed (bytes/s) | Speed (MB/s) | Time (ms)")
